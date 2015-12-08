@@ -1,8 +1,8 @@
-##Mixed Myth Forum
+#Mixed Myth Forum
 
-#About
+##About
 This project is a forum.
 
-#Contributors
+##Contributors
 * Andrew Cerbone
 * Richard Davis
