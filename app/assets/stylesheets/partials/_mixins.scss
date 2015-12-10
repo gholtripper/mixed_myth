@@ -1,0 +1,94 @@
+@mixin button-primary($button-base:$neutral, $button-hover:$neutral-dark) {
+    padding: .4em .8em;
+    font-family: 'Poiret One';
+    font-size: 90%;
+    font-weight: 600;
+    text-align: center;
+    color: $button-hover;
+    background-color: $button-base;
+    border: 0;
+    &:hover {
+        background-color: $button-hover;
+        border-color: $button-base;
+        color: $button-base;
+    }
+}
+@mixin button-inverted($button-base:$neutral-dark, $button-hover:$neutral) {
+    padding: .4em .8em;
+    font-family: 'Poiret One';
+    font-size: 90%;
+    font-weight: 600;
+    text-align: center;
+    color: $button-hover;
+    background-color: $button-base;
+    border: 0;
+    &:hover {
+        background-color: $button-hover;
+        border-color: $button-base;
+        color: $button-base;
+    }
+}
+@mixin button-top($button-base:$three-t-two, $button-hover:$one) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: .4em .8em;
+    font-family: 'Playfair Display SC';
+    font-size: 90%;
+    font-weight: 400;
+    text-align: center;
+    display: block;
+    color: $button-hover;
+    background-color: $button-base;
+    border: 0;
+    &:hover {
+        background-color: $button-hover;
+        color: $button-base;
+    }
+}
+@mixin button-safe($button-base:$safe, $button-hover:$neutral) {
+    padding: .4em .8em;
+    font-family: 'Poiret One';
+    font-size: 90%;
+    font-weight: 600;
+    text-align: center;
+    color: $button-hover;
+    background-color: $button-base;
+    border: 0;
+    &:hover {
+        background-color: $button-hover;
+        border-color: $button-base;
+        color: $button-base;
+    }
+}
+@mixin button-caution($button-base:$caution, $button-hover:$neutral-dark) {
+    padding: .4em .8em;
+    font-family: 'Poiret One';
+    font-size: 90%;
+    font-weight: 600;
+    text-align: center;
+    color: $button-hover;
+    background-color: $button-base;
+    border: 0;
+    &:hover {
+        background-color: $button-hover;
+        border-color: $button-base;
+        color: $button-base;
+    }
+}
+@mixin button-danger($button-base:$danger, $button-hover:$neutral-dark) {
+    padding: .4em .8em;
+    font-family: 'Poiret One';
+    font-size: 90%;
+    font-weight: 600;
+    text-align: center;
+    color: $button-hover;
+    background-color: $button-base;
+    border: 0;
+    &:hover {
+        background-color: $button-hover;
+        border-color: $button-base;
+        color: $button-base;
+    }
+}

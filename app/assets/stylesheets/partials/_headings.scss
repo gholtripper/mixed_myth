@@ -1,0 +1,160 @@
+// ======================
+//  Headings
+// ======================
+
+//  Styles for headings
+// ======================
+
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 300%;
+    font-weight: 650;
+}
+header h1 {
+    margin-left: span(2);
+    margin-right: span(2);
+    text-align: center;
+    color: $one;
+    background-color: $three-t-two;
+}
+h2 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 150%;
+    font-weight: 200;
+}
+article h2 {
+    margin-bottom: 0;
+    padding-top: 1em;
+    padding-bottom: 0em;
+    text-align: center;
+    color: $one;
+}
+h3 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 95%;
+    font-weight: 200;
+}
+header h3 {
+    margin-left: span(1);
+    margin-right: span(1);
+    padding: .5em;
+    text-align: center;
+    background-color: $three-t-two;
+    color: $one;
+}
+h4 {
+    font-family: 'Playfair Display SC';
+    font-size: 110%;
+    font-weight: 200;
+}
+footer h4 {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    text-align: center;
+    color: $one;
+}
+
+@include breakpoint($XS) {
+    header h1 {
+        margin-left: span(6);
+        margin-right: span(6);
+        width: span(12);
+    }
+    header h3 {
+        margin-left: span(4);
+        margin-right: span(4);
+        padding: .5em;
+        width: span(16);
+        font-size: 110%;
+    }
+    h2 {
+
+    }
+}
+
+@include breakpoint($S) {
+    header h1 {
+        margin-right: span(1);
+        margin-left: span(13);
+        width: span(10)
+    }
+    header h3 {
+        margin-left: span(11);
+        margin-right: span(1);
+        padding: .5em;
+        width: span(12);
+    }
+    h2 {
+
+    }
+}
+
+@include breakpoint($M) {
+    header h1 {
+        display: inline-block;
+        width: span(8);
+        margin-top: 3em;
+        margin-right: span(1);
+        margin-left: span(15);
+        padding-top: .2em;
+        padding-bottom: .2em;
+    }
+    header h3 {
+        display: inline-block;
+        width: span(11);
+        margin-right: span(1);
+        margin-left: span(12);
+        padding: .5em;
+        font-size: 125%;
+    }
+    h2 {
+        font-size: 200%;
+    }
+}
+
+@include breakpoint($L) {
+    header h1 {
+        display: inline-block;
+        width: span(8);
+        margin-top: 3em;
+        margin-right: span(1);
+        margin-left: span(15);
+        padding-top: .2em;
+        padding-bottom: .2em;
+        font-size: 400%;
+    }
+    header h3 {
+        display: inline-block;
+        width: span(12);
+        margin-right: span(1);
+        margin-left: span(11);
+        padding: .5em;
+        font-size: 175%;
+    }
+    h2 {
+        font-size: 200%;
+    }
+}
+
+@include breakpoint($XL) {
+    header h1 {
+        display: inline-block;
+        width: span(7);
+        margin-top: 3em;
+        margin-right: span(1);
+        margin-left: span(16);
+        padding-top: .2em;
+        padding-bottom: .2em;
+    }
+    header h3 {
+        display: inline-block;
+        width: span(11);
+        margin-right: span(1);
+        margin-left: span(12);
+        padding: .5em;
+        font-size: 175%;
+    }
+    h2 {
+        font-size: 200%;
+    }
+}

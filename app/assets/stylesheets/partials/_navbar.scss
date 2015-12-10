@@ -1,0 +1,134 @@
+// ======================
+//  Navbar
+// ======================
+
+//  Style for menu
+// ======================
+
+.nav-header {
+    width: span(24);
+    background-color: $one;
+    margin-bottom: 0;
+    @include background-image(linear-gradient($one-t-one, $one));
+
+}
+#nav-heading {
+    margin-top: -.5em;
+    margin-bottom: 0;
+    padding: 1em;
+    width: span(24);
+    color: $neutral;
+    text-align: left;
+}
+nav {
+    width: span(24);
+    text-align: center;
+    @include background-image(linear-gradient($one-t-one, $one));
+    position: absolute;
+    transform: translateX(-200%);
+    transition: transform .6s ease;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    
+        li {
+            font-family: 'Playfair Display SC';
+            font-size: 110%;
+
+            a {
+                padding-top: 1em;
+                padding-bottom: 1em;
+                display: block;
+                text-decoration: none;
+                color: $neutral;
+                &:hover {
+                    background-color: $one-s-one;
+                }
+                &:active {
+                    color: $one;
+                    background-color: $one-s-two;
+                }
+            }
+        }
+    }
+}
+.active-menu {
+    color: $one;
+    background-color: $three-t-two;
+}
+.open-menu {
+    transform: translateX(0);
+}
+
+//  Style for subenu
+// ======================
+
+.submenu-toggle {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: block;
+    text-decoration: none;
+    color: $neutral;
+    &:hover {
+        background-color: $one-s-one;
+    }
+    &:active {
+        color: $one;
+        background-color: $one-s-two;
+    }
+}
+.close-submenu {
+    max-height: 0;
+    overflow: hidden;
+    background-color: $one-t-two;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.close-submenu > li {
+    font-size: 90%;
+    border: none;
+}
+.close-submenu > li:first-child {
+    border-top: 1px solid $one-s-two;
+}
+.close-submenu > li:last-child {
+    border-bottom: 1px solid $one-s-two;
+}
+.open-submenu {
+    max-height: 400px;
+    background-color: $one-t-two;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+.open-submenu > li {
+    font-size: 90%;
+    border: none;
+}
+.open-submenu > li:first-child {
+    border-top: 1px solid $one-s-two;
+}
+.open-submenu > li:last-child {
+    border-bottom: 1px solid $one-s-two;
+}
+
+//  Media Queries
+// ======================
+
+@include breakpoint($S) {
+    nav {
+        width: span(16);
+    }
+}
+
+@include breakpoint($M) {
+    nav {
+        width: span(12);
+    }
+}
+
+@include breakpoint($L) {
+    nav {
+        width: span(8);
+    }
+}

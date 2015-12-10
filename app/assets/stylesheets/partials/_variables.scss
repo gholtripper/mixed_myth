@@ -1,0 +1,36 @@
+// ======================
+//  Variables
+// ======================
+
+//  Color Palette
+// ======================
+
+$safe: hsla(100, 80%, 51%, 1);
+$caution: hsla(35, 80%, 51%, 1);
+$danger: hsla(0, 80%, 51%, 1);
+
+$one: hsl(2, 80%, 61%);
+$one-t-one: tint($one, 20%);
+$one-t-two: tint($one, 40%);
+$one-s-one: shade($one, 20%);
+$one-s-two: shade($one, 40%);
+$two: hsla(210, 29%, 24%, 1);
+$two-t-one: tint($two, 20%);
+$two-t-two: tint($two, 40%);
+$two-s-one: shade($two, 20%);
+$two-s-two: shade($two, 40%);
+$three: hsl(211, 29%, 75%);
+$three-t-one: tint($three, 20%);
+$three-t-two: tint($three, 60%);
+$three-s-one: shade($three, 20%);
+$three-s-two: shade($three, 40%);
+$neutral: hsla(49, 80%, 95%, 1);
+$neutral-dark: hsla(49, 80%, 5%, 1);
+
+//  Viewport Sizes
+// ======================
+$XL: 1070px;
+$L: 910px;
+$M: 750px;
+$S: 590px;
+$XS: 420px;

@@ -1,0 +1,42 @@
+// ======================
+//  Text
+// ======================
+
+//  Articles
+// ======================
+
+article p {
+    margin: 0;
+    padding-top: 0em;
+    padding-bottom: 1em;
+    padding-left: .75em;
+    padding-right: .75em;
+    font-family: 'Poiret One';
+    font-size: 100%;
+    font-weight: 600;
+    text-indent: 1em;
+    color: $neutral-dark;
+}
+article p::first-letter {
+    font-size: 120%;
+    color: $one;
+}
+
+//  Footer
+// ======================
+
+footer h4 {
+    font-family: 'Playfair Display SC';
+    font-size: 100%;
+    font-weight: 400;
+    text-align: center;
+    color: $one;
+}
+
+@include breakpoint($M) {
+    article p {
+        padding-left: 2em;
+        padding-right: 2em;
+        font-size: 110%;
+    }
+}

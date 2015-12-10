@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mixed Myth</title>
+    <title> | Mixed Myth</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
+      <div class="nav-header">
+        <h4 class="nav-toggle" id="nav-heading">Menu</h4>
+      </div>
+      <nav>
+          <ul>
+              <li><a href="#" class="active-menu">home</a></li>
+              <li class="submenu-toggle" id="subtoggle1">about</a></li>
+              <ul id="submenu-1" class="close-submenu">
+                  <li><a href="#">who i am</a></li>
+                  <li><a href="#">what i do</a></li>
+                  <li><a href="#">why i do it</a></li>
+              </ul>
+              <li class="submenu-toggle" id="subtoggle2">guides</a></li>
+              <ul id="submenu-2" class="close-submenu">
+                  <li><a href="#">design</a></li>
+                  <li><a href="#">code</a></li>
+                  <li><a href="#">freedom</a></li>
+              </ul>
+              <li><a href="#">links</a></li>
+          </ul>
+      </nav>
     <header>
       <h1>Mixed Myth</h1>
-      <h4>This is the sub-title</h4>
+      <h3>This is the sub-title</h3>
     </header>
     <%= yield %>
     <footer>
-      <h4>&cp; Copyright 2015 Mixed Myth</h4>
+      <h4>&#169; Copyright 2015 Mixed Myth</h4>
     </footer>
   </body>
 </html>

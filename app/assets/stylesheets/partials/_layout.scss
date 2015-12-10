@@ -1,0 +1,65 @@
+// ======================
+//  Layout
+// ======================
+
+//  Styles for semantic
+//  elements
+// ======================
+
+@import "susy";
+
+$susy: (
+    global-box-sizing: border-box,
+    columns: 24,
+    gutters: 1/8,
+    math: fluid,
+    output: float,
+    gutter-position: inside,
+);
+
+@include border-box-sizing;
+
+body {  
+    @include container();
+    margin: 0em;
+    background-color: $two;
+    z-index: -2;
+} 
+header {
+    width: span(24);
+    background-color: transparent;
+}
+article {
+    width: span(23);
+    margin-top: 1em;
+    margin-left: span(.5);
+    margin-right: span(.5);
+    margin-bottom: 2em;
+    background-color: $neutral;
+}
+section {
+    position: relative;
+    width: span(24);
+    height: 500px;
+    overflow: hidden;
+    display: block;
+    z-index: -1;
+}
+aside {
+    width: span(8);
+    background-color: $three;
+}
+footer {
+    width: span(24);
+    padding: 1em;
+    background-color: $three-t-two;
+}
+ @include breakpoint($M) {
+     article {
+        margin-top: -10em;
+        width: span(15);
+        margin-left: span(4.5);
+        margin-right: span(4.5);
+        min-height: 600px;
+    }
+ }
