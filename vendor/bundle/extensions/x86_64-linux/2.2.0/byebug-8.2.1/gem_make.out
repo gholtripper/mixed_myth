@@ -1,0 +1,15 @@
+/home/dick/.rvm/rubies/ruby-2.2.3/bin/ruby -r ./siteconf20151210-32219-h97dis.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling locker.c
+compiling breakpoint.c
+compiling context.c
+compiling byebug.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20151210-32219-urro4l/byebug

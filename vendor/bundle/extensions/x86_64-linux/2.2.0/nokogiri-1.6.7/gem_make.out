@@ -1,4 +1,4 @@
-/home/dick/.rvm/rubies/ruby-2.2.0/bin/ruby -r ./siteconf20151209-29710-1sgu39b.rb extconf.rb
+/home/dick/.rvm/rubies/ruby-2.2.3/bin/ruby -r ./siteconf20151210-32219-48f7zg.rb extconf.rb
 checking if the C compiler accepts ... yes
 Building nokogiri using packaged libraries.
 Using mini_portile version 2.0.0
@@ -37,7 +37,7 @@ If you are using Bundler, tell it to use the option:
 Note, however, that nokogiri is not fully compatible with arbitrary
 versions of libxml2 provided by OS/package vendors.
 ************************************************************************
-Extracting libxml2-2.9.2.tar.gz into tmp/x86_64-unknown-linux-gnu/ports/libxml2/2.9.2... OK
+Extracting libxml2-2.9.2.tar.gz into tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.2... OK
 Running git apply with /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/patches/libxml2/0001-Revert-Missing-initialization-for-the-catalog-module.patch... OK
 Running git apply with /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/patches/libxml2/0002-Fix-missing-entities-after-CVE-2014-3660-fix.patch... OK
 Running git apply with /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/patches/libxml2/0003-Stop-parsing-on-entities-boundaries-errors.patch... OK
@@ -51,7 +51,7 @@ Running git apply with /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogi
 Running 'configure' for libxml2 2.9.2... OK
 Running 'compile' for libxml2 2.9.2... OK
 Running 'install' for libxml2 2.9.2... OK
-Activating libxml2 2.9.2 (from /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/ports/x86_64-unknown-linux-gnu/libxml2/2.9.2)...
+Activating libxml2 2.9.2 (from /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/ports/x86_64-pc-linux-gnu/libxml2/2.9.2)...
 ************************************************************************
 IMPORTANT NOTICE:
 
@@ -86,7 +86,7 @@ If you are using Bundler, tell it to use the option:
     bundle config build.nokogiri --use-system-libraries
     bundle install
 ************************************************************************
-Extracting libxslt-1.1.28.tar.gz into tmp/x86_64-unknown-linux-gnu/ports/libxslt/1.1.28... OK
+Extracting libxslt-1.1.28.tar.gz into tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.28... OK
 Running git apply with /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/patches/libxslt/0001-Adding-doc-update-related-to-1.1.28.patch... OK
 Running git apply with /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/patches/libxslt/0002-Fix-a-couple-of-places-where-f-printf-parameters-wer.patch... OK
 Running git apply with /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/patches/libxslt/0003-Initialize-pseudo-random-number-generator-with-curre.patch... OK
@@ -104,7 +104,7 @@ Running git apply with /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogi
 Running 'configure' for libxslt 1.1.28... OK
 Running 'compile' for libxslt 1.1.28... OK
 Running 'install' for libxslt 1.1.28... OK
-Activating libxslt 1.1.28 (from /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/ports/x86_64-unknown-linux-gnu/libxslt/1.1.28)...
+Activating libxslt 1.1.28 (from /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/ports/x86_64-pc-linux-gnu/libxslt/1.1.28)...
 checking for main() in -llzma... yes
 checking for xmlParseDoc() in libxml/parser.h... yes
 checking for xsltParseStylesheetDoc() in libxslt/xslt.h... yes
@@ -125,7 +125,7 @@ compiling xml_attr.c
 compiling xml_comment.c
 compiling xml_syntax_error.c
 compiling xslt_stylesheet.c
-In file included from /home/dick/.rvm/rubies/ruby-2.2.0/include/ruby-2.2.0/ruby.h:33:0,
+In file included from /home/dick/.rvm/rubies/ruby-2.2.3/include/ruby-2.2.0/ruby.h:33:0,
                  from ./nokogiri.h:33,
                  from ./xslt_stylesheet.h:4,
                  from xslt_stylesheet.c:1:
@@ -133,24 +133,24 @@ xslt_stylesheet.c: In function ‘initFunc’:
 xslt_stylesheet.c:217:21: warning: passing argument 1 of ‘rb_data_object_get’ makes integer from pointer without a cast [-Wint-conversion]
      Data_Get_Struct(ctxt->style->_private, nokogiriXsltStylesheetTuple,
                      ^
-/home/dick/.rvm/rubies/ruby-2.2.0/include/ruby-2.2.0/ruby/ruby.h:1044:41: note: in definition of macro ‘Data_Get_Struct’
+/home/dick/.rvm/rubies/ruby-2.2.3/include/ruby-2.2.0/ruby/ruby.h:1044:41: note: in definition of macro ‘Data_Get_Struct’
      ((sval) = (type*)rb_data_object_get(obj))
                                          ^
-/home/dick/.rvm/rubies/ruby-2.2.0/include/ruby-2.2.0/ruby/ruby.h:1189:1: note: expected ‘VALUE {aka long unsigned int}’ but argument is of type ‘void *’
+/home/dick/.rvm/rubies/ruby-2.2.3/include/ruby-2.2.0/ruby/ruby.h:1189:1: note: expected ‘VALUE {aka long unsigned int}’ but argument is of type ‘void *’
  rb_data_object_get(VALUE obj)
  ^
 xslt_stylesheet.c: In function ‘shutdownFunc’:
 xslt_stylesheet.c:230:21: warning: passing argument 1 of ‘rb_data_object_get’ makes integer from pointer without a cast [-Wint-conversion]
      Data_Get_Struct(ctxt->style->_private, nokogiriXsltStylesheetTuple,
                      ^
-/home/dick/.rvm/rubies/ruby-2.2.0/include/ruby-2.2.0/ruby/ruby.h:1044:41: note: in definition of macro ‘Data_Get_Struct’
+/home/dick/.rvm/rubies/ruby-2.2.3/include/ruby-2.2.0/ruby/ruby.h:1044:41: note: in definition of macro ‘Data_Get_Struct’
      ((sval) = (type*)rb_data_object_get(obj))
                                          ^
-/home/dick/.rvm/rubies/ruby-2.2.0/include/ruby-2.2.0/ruby/ruby.h:1189:1: note: expected ‘VALUE {aka long unsigned int}’ but argument is of type ‘void *’
+/home/dick/.rvm/rubies/ruby-2.2.3/include/ruby-2.2.0/ruby/ruby.h:1189:1: note: expected ‘VALUE {aka long unsigned int}’ but argument is of type ‘void *’
  rb_data_object_get(VALUE obj)
  ^
 compiling html_element_description.c
-In file included from /home/dick/.rvm/rubies/ruby-2.2.0/include/ruby-2.2.0/ruby.h:33:0,
+In file included from /home/dick/.rvm/rubies/ruby-2.2.3/include/ruby-2.2.0/ruby.h:33:0,
                  from ./nokogiri.h:33,
                  from ./html_element_description.h:4,
                  from html_element_description.c:1:
@@ -158,7 +158,7 @@ html_element_description.c: In function ‘get_description’:
 html_element_description.c:252:40: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
    return Data_Wrap_Struct(klass, 0, 0, (void *)description);
                                         ^
-/home/dick/.rvm/rubies/ruby-2.2.0/include/ruby-2.2.0/ruby/ruby.h:1028:35: note: in definition of macro ‘Data_Wrap_Struct’
+/home/dick/.rvm/rubies/ruby-2.2.3/include/ruby-2.2.0/ruby/ruby.h:1028:35: note: in definition of macro ‘Data_Wrap_Struct’
      rb_data_object_alloc((klass),(sval),(RUBY_DATA_FUNC)(mark),(RUBY_DATA_FUNC)(free))
                                    ^
 compiling xml_sax_parser.c
@@ -278,9 +278,9 @@ compiling xml_element_decl.c
 compiling xml_cdata.c
 linking shared-object nokogiri/nokogiri.so
 Cleaning files only used during build.
-rm -rf /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/ext/nokogiri/tmp/x86_64-unknown-linux-gnu/ports
-rmdir -p /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/ext/nokogiri/tmp/x86_64-unknown-linux-gnu
+rm -rf /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports
+rmdir -p /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/ext/nokogiri/tmp/x86_64-pc-linux-gnu
 rm -rf /home/dick/workspace/mixed_myth/vendor/bundle/gems/nokogiri-1.6.7/ports
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nokogiri.so ./.gem.20151209-29710-1j02wai/nokogiri
+/usr/bin/install -c -m 0755 nokogiri.so ./.gem.20151210-32219-17x0eyj/nokogiri
