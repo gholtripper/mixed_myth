@@ -7,35 +7,82 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-      <div class="nav-header">
-        <h4 class="nav-toggle" id="nav-heading">Menu</h4>
-      </div>
-      <nav>
-          <ul>
-              <li><a href="#" class="active-menu">home</a></li>
-              <li class="submenu-toggle" id="subtoggle1">about</a></li>
-              <ul id="submenu-1" class="close-submenu">
-                  <li><a href="#">who i am</a></li>
-                  <li><a href="#">what i do</a></li>
-                  <li><a href="#">why i do it</a></li>
-              </ul>
-              <li class="submenu-toggle" id="subtoggle2">guides</a></li>
-              <ul id="submenu-2" class="close-submenu">
-                  <li><a href="#">design</a></li>
-                  <li><a href="#">code</a></li>
-                  <li><a href="#">freedom</a></li>
-              </ul>
-              <li><a href="#">links</a></li>
-          </ul>
-      </nav>
-    <header>
-      <h1>Mixed Myth</h1>
-      <h3>This is the sub-title</h3>
-    </header>
+    <%= render 'layouts/nav' %>
+    <%= render 'layouts/header' %>
     <%= yield %>
-    <footer>
-      <h4>&#169; Copyright 2015 Mixed Myth</h4>
-    </footer>
+    <%= render 'layouts/footer' %>
+    <script>
+      var showSidebar = function() {
+        $('body').toggleClass("active");
+      };
 
+      // add/remove classes everytime the window resize event fires
+      $(window).resize(function(){
+        var off_canvas_nav_display = $('.off-canvas-navigation').css('display');
+        if (off_canvas_nav_display === 'block') {
+          $("body").removeClass("active");
+        }
+      });
+
+      $(document).ready(function() {
+        // Toggle for sidebar
+        $('.nav-toggle').on('click', function() {
+            // when nav-toggle clicked, nav class is set to open
+            $('nav').toggleClass('open-menu');
+        });
+
+        // Toggle for submenu
+        $('#subtoggle1').on('click', function() {
+            if ($('#submenu-2').hasClass('open-submenu')) {
+                $('#submenu-2').removeClass('open-submenu');
+                $('#submenu-2').addClass('close-submenu');
+            }
+            // when nav-toggle clicked, nav class is set to open
+            if ($('#submenu-1').hasClass('close-submenu')) {
+                $('#submenu-1').removeClass('close-submenu');
+                $('#submenu-1').addClass('open-submenu');
+            } else {
+                $('#submenu-1').removeClass('open-submenu');
+                $('#submenu-1').addClass('close-submenu');
+            }
+        });
+
+        $('#subtoggle2').on('click', function() {
+            if ($('#submenu-1').hasClass('open-submenu')) {
+                $('#submenu-1').removeClass('open-submenu');
+                $('#submenu-1').addClass('close-submenu');
+            }
+            // when nav-toggle clicked, nav class is set to open
+            if ($('#submenu-2').hasClass('close-submenu')) {
+                $('#submenu-2').removeClass('close-submenu');
+                $('#submenu-2').addClass('open-submenu');
+            } else {
+                $('#submenu-2').removeClass('open-submenu');
+                $('#submenu-2').addClass('close-submenu');
+            }
+        });
+
+        var offset = 220; // back to top will fade in after scrolling 220px down
+        var duration = 500; // animation will last 500ms
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > offset) { 
+                // if the amount scrolled down exceeds offset, fades in
+                $('.back-to-top').fadeIn(duration);
+            } else {
+                // if the amount scrolled down doesn't exceed offset, fade out
+                $('.back-to-top').fadeOut(duration);
+            }
+        });
+        
+        $('.back-to-top').click(function(event) {
+            // prevents default click event
+            event.preventDefault();
+            // uses animate method on body to scroll page back up to top
+            $('html, body').animate({scrollTop: 0}, duration);
+            // ends function
+            return false;
+        });
+      });
+    </script>
   </body>
 </html>

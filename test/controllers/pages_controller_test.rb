@@ -5,9 +5,15 @@ class PagesControllerTest < ActionController::TestCase
     @base_title = 'Mixed Myth'
   end
 
-  test "should get home" do
+  test 'should get home' do
     get :home
     assert_response :success
     assert_select 'title', 'Home | Mixed Myth'
+  end
+
+  test 'should get about' do
+    get :about
+    assert_response :success
+    assert_select 'title', 'About | Mixed Myth'
   end
 end
