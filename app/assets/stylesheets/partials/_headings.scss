@@ -14,20 +14,20 @@ header h1 {
     margin-left: span(2);
     margin-right: span(2);
     text-align: center;
-    color: $one;
-    background-color: $three-t-two;
+    color: $two-s-two;
+    background-color: $three;
 }
 h2 {
     font-family: 'Playfair Display SC', serif;
     font-size: 150%;
     font-weight: 200;
 }
-article h2 {
+section h2 {
     margin-bottom: 0;
     padding-top: 1em;
     padding-bottom: 0em;
     text-align: center;
-    color: $one;
+    color: $two-s-two;
 }
 h3 {
     font-family: 'Playfair Display SC', serif;
@@ -39,8 +39,8 @@ header h3 {
     margin-right: span(1);
     padding: .5em;
     text-align: center;
-    background-color: $three-t-two;
-    color: $one;
+    background-color: $three;
+    color: $two;
 }
 h4 {
     font-family: 'Playfair Display SC';
@@ -51,7 +51,7 @@ footer h4 {
     margin-top: .5em;
     margin-bottom: .5em;
     text-align: center;
-    color: $one;
+    color: $two-s-two;
 }
 
 @include breakpoint($XS) {

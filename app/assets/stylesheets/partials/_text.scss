@@ -2,10 +2,10 @@
 //  Text
 // ======================
 
-//  Articles
+//  Sections
 // ======================
 
-article p {
+section p {
     margin: 0;
     padding-top: 0em;
     padding-bottom: 1em;
@@ -17,24 +17,13 @@ article p {
     text-indent: 1em;
     color: $neutral-dark;
 }
-article p::first-letter {
+section p::first-letter {
     font-size: 120%;
     color: $one;
 }
 
-//  Footer
-// ======================
-
-footer h4 {
-    font-family: 'Playfair Display SC';
-    font-size: 100%;
-    font-weight: 400;
-    text-align: center;
-    color: $one;
-}
-
 @include breakpoint($M) {
-    article p {
+    section p {
         padding-left: 2em;
         padding-right: 2em;
         font-size: 110%;
