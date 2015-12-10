@@ -14,5 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-// Make the showSidebar function into a variable so it can be easily called
